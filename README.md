@@ -11,7 +11,7 @@ This project is written in Python 3.
 ## Easterlib methods specifications
 ##### _*Note: all these descriptions are presently contained in the exemplary orthodox_easter_calculus.py file._
 
-* ec.mode 
+* ec.mode\ 
 	_Applies to both calendar (Julian or Gregorian) and algorithm used for Easter's calculus._
 	##### _available modes:_
 	- 1.	"Julian" : Calculates Julian calendar's Easter according to the Meeus's algorithm
