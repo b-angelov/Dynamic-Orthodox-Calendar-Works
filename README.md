@@ -42,15 +42,15 @@ This project is written in Python 3.
 * ##### _Note: all variables are being set on class initialization. If any option has been changed, ec.set() function must be called in order to update results._
 
     1. **__ec.date = [month, day]__**
-    _Returns Easter's day and month list according to provided configuration._
+		- _Returns Easter's day and month list according to provided configuration._
     2. **ec.day = int(day)**
-    _Contains Easter's day in the month number._
+		- _Contains Easter's day in the month number._
     3. **ec.month = int(month)**
-    _Contains the Easter month's number._
+		- _Contains the Easter month's number._
     4. **ec.leap = bool**
-    _Contains information whether checked year is a leap year. True means leap, False not leap. The calculation is done according to calendar set (Julian or Gregorian)._
+		- _Contains information whether checked year is a leap year. True means leap, False not leap. The calculation is done according to calendar set (Julian or Gregorian)._
     5. **ec.year = int(year)**
-    _The year processed._
+		- _The year processed._
     
 * ### Method functions available:
 
