@@ -13,9 +13,9 @@ This project is written in Python 3.
 
 * ec.mode = applies to both calendar (Julian or Gregorian) and algorithm used for Easter's calculus.
 available modes:
-	-1.	"Julian" : Calculates Julian calendar's Easter according to the Meeus's algorithm
-	-2.	"GaussJulian" : Calculates Julian calendar's Easter according to the Gauss' Julian Easter algorithm.
-	-3.	"JulianInGregorian" : Calculates Julian Easter according Meeus' algorithm and aligns it to Gregorian Civil calendar (Suitable for Eastern Orthodox' Easter). Alignment for dates before Gregorian's calendar adoption is done according to adoption year and options set.
+	- 1.	"Julian" : Calculates Julian calendar's Easter according to the Meeus's algorithm
+	- 2.	"GaussJulian" : Calculates Julian calendar's Easter according to the Gauss' Julian Easter algorithm.
+	- 3.	"JulianInGregorian" : Calculates Julian Easter according Meeus' algorithm and aligns it to Gregorian Civil calendar (Suitable for Eastern Orthodox' Easter). Alignment for dates before Gregorian's calendar adoption is done according to adoption year and options set.
 	4.	"GaussJulianInGregorian" : Same as "JulianInGregorian", with Gauss' Julian algorithm used for calculation instead of Meeus'.
 	5.	"GaussGregorian" : Calculates Easter's day according to Gregorian calendar, using Gauss algorithm. Dates before Gregorian calendar's adoption are calculated according to the adoption year and options set.
 	6.	"AnonymousGregorian" : Same as "GaussGregorian", using Anonymous algorithm posted by New York Times correspondent instead.
