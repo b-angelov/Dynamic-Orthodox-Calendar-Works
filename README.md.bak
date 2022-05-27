@@ -22,3 +22,4 @@ available modes:
 	"AnonymousGregorianOptimized" : Same as "AnonymousGregorian", although New Scientist's optimization from 1961st are included in the algorithm.
 	Note: all mode names are case insensitive.
 
+- 2. ec.year = the year to check for
