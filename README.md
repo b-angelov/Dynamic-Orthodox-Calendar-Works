@@ -9,5 +9,5 @@ This project is written in Python 3.
 - Orthodox Easter calculus
 
 ## Easterlib methods specifications
-### *Note: all these descriptions are presently contained in the exemplary orthodox_easter_calculus.py file.
+#### *Note: all these descriptions are presently contained in the exemplary orthodox_easter_calculus.py file.
 
