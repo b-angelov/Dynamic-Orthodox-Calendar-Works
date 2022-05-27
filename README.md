@@ -5,11 +5,11 @@ This project is written in Python 3.
 
 ## Current files:
 
-- Easterlib
-- Orthodox Easter calculus
+- Easterlib.py
+- orthodox-easter-calculus.py
 
 ## Easterlib specifications:
-##### _*Note: all these descriptions are presently contained in the exemplary orthodox_easter_calculus.py file._
+##### _*Note: all these descriptions are presently contained in the exemplary orthodox-easter-calculus.py file._
 
 
 * ### Options:
@@ -66,3 +66,6 @@ This project is written in Python 3.
 		-   _Processes given year according to Gauss algorithm. mode option with values "Julian" (default) and "Gregorian" to switch between calendars processed. [month, day] list is returned._
 	6. **ec.AnonymousGregorian(year, mode = "optimized")**
 		-   _Processes given year according to the algorithm post in New York Times by a correspondent in 1876. mode option sets algorithm state to "optimized" (includes 1961 New Scientist's correction)(default) and the original 1867 version.The mode value is case sensitive. [month, day] list is returned._
+
+## Orthodox easter calculus specifications:
+	####_This file uses easterlib to determine when the Easter date is, by given year. It has mainly test purpose and might be removed later._
