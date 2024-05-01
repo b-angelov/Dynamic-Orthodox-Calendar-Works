@@ -22,6 +22,7 @@ body, table, ul {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-transform: lowercase;
 }
 
 body:before{
@@ -34,6 +35,8 @@ body:before{
     background-image: url("../images/background.jpg");
     background-position: center;
     background-repeat:no-repeat ;
+    z-index: -1;
+    background-size: 190vh 100%;
 }
 
 body > * {
@@ -125,9 +128,28 @@ body .nav .egg {
 
 body main table{
     border:3px solid green;
-    flex-wrap: wrap;
+    text-transform:capitalize;
+    border-collapse: collapse;
+    text-shadow: #502706 1px 1px 1px;
+    color: rgba(243, 176, 9, 0.83);
+}
+
+body main table thead tr{
+    background: #0b850d;
+}
+
+body main table thead th{
+    border: 2px solid black;
+}
+
+body main table tbody tr:nth-child(even){
+    background: rgba(72, 101, 244, 0.29);
+}
+body main table tbody tr:nth-child(odd){
+    background: rgba(31, 156, 14, 0.22);
 }
 
 body main table td,body main table th{
-    border: 1px solid red;
+    text-transform: lowercase;
+    text-align: center;
 }
