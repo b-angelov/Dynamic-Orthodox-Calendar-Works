@@ -78,7 +78,7 @@ body .main .egg {
 
 .red-egg {
     background: rgb(197, 88, 40);
-    background: radial-gradient(circle, rgba(251, 218, 0, 0.9) 1px, rgb(237, 4, 17) 36%);
+    background: radial-gradient(circle, rgba(253, 235, 129, 0.9) 1px, rgb(237, 4, 17) 36%);
 }
 
 .blue-egg {
@@ -93,12 +93,12 @@ body .main .egg {
 
 .yellow-egg {
     background: rgb(233, 241, 13);
-    background: radial-gradient(circle, rgba(243, 251, 0, 0.37) 1px, rgb(237, 233, 4) 36%);
+    background: radial-gradient(circle, rgba(250, 253, 164, 0.93) 1px, rgb(237, 233, 4) 36%);
 }
 
 .golden-egg {
     background: rgb(241, 203, 13);
-    background: radial-gradient(circle, rgba(251, 209, 0, 0.37) 1px, rgb(237, 190, 4) 36%);
+    background: radial-gradient(circle, rgba(251, 234, 149, 0.91) 1px, rgb(237, 190, 4) 36%);
 }
 
 .purple-egg {
