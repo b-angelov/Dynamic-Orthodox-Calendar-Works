@@ -8,7 +8,7 @@
 <body>
     <article class="nav">
         <p class="egg red-egg left-egg">Χριστός Ανέστη!</p>
-        <p class="egg main-egg red-egg">Христос Воскресе! <span class="year-holder">2024</span></p>
+        <p class="egg main-egg red-egg">Христос Воскресе! <span id="year-holder">2024</span></p>
         <p class="egg golden-egg">Christus resurrexit!</p>
         <p class="egg golden-egg glagollitic">Христос Воскресе!</p>
         <p class="egg red-egg right-egg">Christ is risen!</p>
@@ -17,24 +17,25 @@
         <table>
             <thead>
             <tr>
+                <th>Календар</th>
                 <th>Година</th>
                 <th>Ден</th>
                 <th>Месец</th>
-                <th>Календар</th>
                 <th>Високосна</th>
             </tr>
             </thead>
             <tbody>
             <tr>
+                <td class="calendar"></td>
                 <td class="year"></td>
                 <td class="day"></td>
                 <td class="month"></td>
-                <td class="calendar"></td>
                 <td class="leap"></td>
             </tr>
             </tbody>
 
         </table>
     </main>
+    <script type="module" src="assets/app.js"></script>
 </body>
 </html>

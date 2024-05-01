@@ -26,7 +26,7 @@ class EasterCalculus {
             this.date = this.JulianInGregorian(date[0], date[1], year)
         } else if (mode === "GaussGregorian".toLowerCase()) {
             this.date = this.GaussAlgorithm(year, "Gregorian")
-        } else if (mode === "GaussJulian".toLowerCase() || !this.gregPriorAdoption) {
+        } else if (mode === "GaussJulian".toLowerCase() /*|| this.gregPriorAdoption === false*/) {
             this.date = this.GaussAlgorithm(year)
             this.leap = this.isLeap(year, "Julian")
         } else if (mode === "GaussJulianInGregorian".toLowerCase()) {
@@ -109,7 +109,7 @@ class EasterCalculus {
         if (this.gregPriorAdoption === false && this.__adoption_year() >= year) {
             mode = "Julian"
         }
-        mode = mode.lower()
+        mode = mode.toLowerCase()
         let a = year % 19
         let b = year % 4
         let c = year % 7
@@ -124,18 +124,19 @@ class EasterCalculus {
         }
         let d = (19 * a + M) % 30
         let e = (2 * b + 4 * c + 6 * d + N) % 7
+        let month,day;
         if (22 + d + e <= 31) {
-            let month = 3
-            let day = 22 + d + e
+            month = 3
+            day = 22 + d + e
         } else {
-            let month = 4
-            let day = d + e - 9
+            month = 4
+            day = d + e - 9
         }
 
         if (d === 28 && e === 6 && (11 * M - 11) % 30 < 19 && day === 25) {
-            let day = 18
+            day = 18
         } else if (d === 29 && e === 6 && day === 26) {
-            let day = 19
+            day = 19
         }
         return [month, day]
     }
@@ -144,31 +145,32 @@ class EasterCalculus {
         if (this.gregPriorAdoption === false && this.__adoption_year() >= year) {
             return this.GaussAlgorithm(year)
         }
-        mode = mode.lower()
+        mode = mode.toLowerCase()
         let a = year % 19
         let b = Math.trunc(year / 100)
         let c = year % 100
         let d = Math.trunc(b / 4)
         let e = b % 4
+        let f,g,h,i,j,k,l,m,n,o,p;
         if (mode === "optimized") {
-            let g = Math.trunc((8 * b + 13) / 25)
+            g = Math.trunc((8 * b + 13) / 25)
         } else {
-            let f = Math.trunc((b + 8) / 25)
-            let g = Math.trunc((b - f + 1) / 3)
+            f = Math.trunc((b + 8) / 25)
+            g = Math.trunc((b - f + 1) / 3)
         }
-        let h = (19 * a + b - d - g + 15) % 30
-        let i = Math.trunc(c / 4)
-        let k = c % 4
-        let l = (32 + 2 * e + 2 * i - h - k) % 7
+        h = (19 * a + b - d - g + 15) % 30
+        i = Math.trunc(c / 4)
+        k = c % 4
+        l = (32 + 2 * e + 2 * i - h - k) % 7
         if (mode === "optimized") {
-            let m = Math.trunc((a + 11 * h + 19 * l) / 433)
-            let n = Math.trunc((h + l - 7 * m + 90) / 25)
-            let p = (h + l - 7 * m + 33 * n + 19) % 32
+            m = Math.trunc((a + 11 * h + 19 * l) / 433)
+            n = Math.trunc((h + l - 7 * m + 90) / 25)
+            p = (h + l - 7 * m + 33 * n + 19) % 32
         } else {
-            let m = Math.trunc((a + 11 * h + 22 * l) / 451)
-            let n = Math.trunc((h + l - 7 * m + 114) / 31)
-            let o = (h + l - 7 * m + 114) % 31
-            let p = o + 1
+            m = Math.trunc((a + 11 * h + 22 * l) / 451)
+            n = Math.trunc((h + l - 7 * m + 114) / 31)
+            o = (h + l - 7 * m + 114) % 31
+            p = o + 1
         }
         let month = n
         let day = p
@@ -176,4 +178,5 @@ class EasterCalculus {
     }
 }
 
-console.log(new EasterCalculus(2023))
+// console.log(new EasterCalculus(1580,"GaussJulian"))
+export default EasterCalculus
