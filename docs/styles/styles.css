@@ -153,3 +153,7 @@ body main table td,body main table th{
     text-transform: lowercase;
     text-align: center;
 }
+
+.year-decrease, .year-increase{
+    cursor: pointer;
+}

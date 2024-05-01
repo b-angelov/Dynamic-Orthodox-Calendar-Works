@@ -5,8 +5,24 @@ function logics(){
     const yearHolder = document.getElementById("year-holder")
     const templateRow = tableBodyElement.querySelector("tr")
     const modes = ["JulianInGregorian","GaussJulianInGregorian","GaussGregorian","AnonymousGregorian","AnonymousGregorianOptimized","Julian","GaussJulian"]
+    let currentYear = new Date().getFullYear()
     templateRow.remove()
     let lang = "bg"
+
+    function setYear(){
+        const prev = document.createElement("span")
+        prev.textContent = "⮜"
+        prev.className = "year-decrease"
+        const next = document.createElement("span")
+        next.textContent = "⮞"
+        next.className = "year-increase"
+        const year = document.createElement("span")
+        year.textContent = currentYear
+        yearHolder.innerHTML = ""
+        yearHolder.append(prev,year,next)
+        prev.addEventListener("click",e=>{ currentYear--; year.textContent = currentYear; load(currentYear);})
+        next.addEventListener("click",e=>{ currentYear++; year.textContent = currentYear; load(currentYear);})
+    }
 
     const translations = {
         bg:{
@@ -41,7 +57,13 @@ function logics(){
         addRow(year,translations[lang].months[month],day,translations[lang][mode],translations[lang].bools[leap])
     }
 
-    modes.forEach(mode=>addData(Number(yearHolder.textContent),mode))
+    function load(year){
+        tableBodyElement.innerHTML = ""
+        modes.forEach(mode=>addData(Number(year),mode))
+    }
+
+    setYear()
+    load(currentYear)
 }
 
 logics()
