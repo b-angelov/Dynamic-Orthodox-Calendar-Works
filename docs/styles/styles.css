@@ -29,7 +29,7 @@ body:before{
     content:" ";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 130vh;
     opacity: 0.3;
     background-color: rgba(186, 181, 77, 0.76);
     background-image: url("../images/background.jpg");
@@ -37,6 +37,7 @@ body:before{
     background-repeat:no-repeat ;
     z-index: -1;
     background-size: 190vh 100%;
+    min-height: 100vh;
 }
 
 body > * {
