@@ -78,7 +78,7 @@ body .main .egg {
 
 .red-egg {
     background: rgb(197, 88, 40);
-    background: radial-gradient(circle, rgba(251, 218, 0, 0.37) 1px, rgb(237, 4, 17) 36%);
+    background: radial-gradient(circle, rgba(251, 218, 0, 0.9) 1px, rgb(237, 4, 17) 36%);
 }
 
 .blue-egg {
