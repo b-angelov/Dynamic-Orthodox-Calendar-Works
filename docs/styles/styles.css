@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Balkara";
+    src: local("Balkara Free Condesed"),
+    url("../fonts/BalkaraFreeCondensed.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Glagolica";
+    src:
+    local("Glagolica Missal DPG"),
+    url("../fonts/GlagolicaMissalDPG.ttf") format("truetype");
+    font-weight: 500;
+}
+
+html {
+    font: 18pt/1.5 Balkara, serif;
+    font-weight: 500;
+}
+
+body, table, ul {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body > * {
+    padding: 2em;
+}
+
+body article.main {
+    display: flex;
+    justify-content: center;
+    gap: 0.1em;
+}
+
+body .main .egg {
+    color: #fdd537;
+    text-shadow: #0A2C48 1px 1px 1px;
+    padding: 1em;
+    padding-top: 5%;
+    /*border: solid 1px black;*/
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: rgba(250, 209, 3, 0.79) 5px 5px 30px;
+    height: auto;
+    max-height: 400px;
+    /*min-height: 150px;*/
+    text-align: center;
+    aspect-ratio: 2/4;
+    border-radius: 100% / 120% 120% 70% 70%;
+
+}
+
+.egg{
+    background: white;
+    z-index: 2;
+    font-size: 1.4em;
+}
+
+.main-egg{
+    position:absolute;
+    z-index:8;
+    font-size: 2em;
+}
+
+.left-egg{
+    position:relative;
+    z-index:1;
+    left: 10%;
+}
+
+.right-egg{
+    position:relative;
+    z-index:1;
+    right: 10%;
+}
+
+.red-egg {
+    background: rgb(197, 88, 40);
+    background: radial-gradient(circle, rgba(251, 218, 0, 0.37) 1px, rgb(237, 4, 17) 36%);
+}
+
+.blue-egg {
+    background: rgb(13, 31, 241);
+    background: radial-gradient(circle, rgba(0, 251, 243, 0.37) 1px, rgb(20, 4, 237) 36%);
+}
+
+.green-egg {
+    background: rgb(70, 241, 13);
+    background: radial-gradient(circle, rgba(46, 251, 0, 0.37) 1px, rgb(75, 202, 3) 36%);
+}
+
+.yellow-egg {
+    background: rgb(233, 241, 13);
+    background: radial-gradient(circle, rgba(243, 251, 0, 0.37) 1px, rgb(237, 233, 4) 36%);
+}
+
+.golden-egg {
+    background: rgb(241, 203, 13);
+    background: radial-gradient(circle, rgba(251, 209, 0, 0.37) 1px, rgb(237, 190, 4) 36%);
+}
+
+.purple-egg {
+    background: rgb(218, 13, 241);
+    background: radial-gradient(circle, rgba(104, 2, 145, 0.37) 1px, rgb(136, 2, 126) 36%);
+}
+
+.glagollitic{
+    font-family: Glagolica, serif;
+}
