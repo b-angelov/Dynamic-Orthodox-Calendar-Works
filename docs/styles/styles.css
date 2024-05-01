@@ -24,44 +24,57 @@ body, table, ul {
     box-sizing: border-box;
 }
 
+body:before{
+    content:" ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-color: rgba(186, 181, 77, 0.76);
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat:no-repeat ;
+}
+
 body > * {
     padding: 2em;
 }
 
-body article.main {
+body article, body main {
     display: flex;
     justify-content: center;
     gap: 0.1em;
 }
 
-body .main .egg {
+
+body .nav .egg {
     color: #fdd537;
     text-shadow: #0A2C48 1px 1px 1px;
     padding: 1em;
-    padding-top: 5%;
+    padding-top: 6%;
     /*border: solid 1px black;*/
-    min-width: 250px;
-    max-width: 350px;
+    min-width: 180px;
+    max-width: 220px;
     box-shadow: rgba(250, 209, 3, 0.79) 5px 5px 30px;
     height: auto;
-    max-height: 400px;
+    max-height: 200px;
     /*min-height: 150px;*/
     text-align: center;
     aspect-ratio: 2/4;
     border-radius: 100% / 120% 120% 70% 70%;
-
 }
 
 .egg{
     background: white;
     z-index: 2;
-    font-size: 1.4em;
+    font-size: 0.4em;
 }
 
 .main-egg{
     position:absolute;
     z-index:8;
-    font-size: 2em;
+    font-size: 1.3em;
+    transition: box-shadow 1s, font-size 1s ease;
 }
 
 .left-egg{
@@ -108,4 +121,14 @@ body .main .egg {
 
 .glagollitic{
     font-family: Glagolica, serif;
+}
+
+body main table{
+    display: flex;
+    border:3px solid green;
+    flex-wrap: wrap;
+}
+
+body main table td,body main table th{
+    border: 1px solid red;
 }
